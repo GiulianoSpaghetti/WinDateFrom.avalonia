@@ -1,6 +1,6 @@
 # WinDateFrom.avalonia
-A fortune's linux clone for android in avalonia
-This is meant to be an experiment: the first 11 avalonia program compiled for android, for windows and for GNU/Linux.
+A programk for calculatng how many time passess from an encounter. Useful in relationship.
+This is in avalonia 11 and is for android, windows and GNU/Linux.
 
 
 # Get it
