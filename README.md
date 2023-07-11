@@ -4,7 +4,7 @@ This is meant to be an experiment: the first 11 avalonia program compiled for an
 
 
 # Get it
-[![google](https://play.google.com/intl/it_it/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=org.altervista.numerone.windatefrom&hl=en)
+[![google](https://play.google.com/intl/it_it/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=org.numerone.altervista.windatefrom&hl=en)
 
 
 # Using repository
