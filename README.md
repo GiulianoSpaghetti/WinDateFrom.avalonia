@@ -1,5 +1,5 @@
 # WinDateFrom.avalonia
-A programk for calculatng how many time passess from an encounter. Useful in relationship.
+A program for calculating how many time passess from an encounter. Useful in relationship.
 This is in avalonia 11 and is for android, windows and GNU/Linux.
 
 
