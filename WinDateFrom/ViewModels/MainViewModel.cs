@@ -36,7 +36,7 @@ public class MainViewModel : ViewModelBase
         string s = file.ReadToEnd();
         file.Close();
         o = Newtonsoft.Json.JsonConvert.DeserializeObject<Opzioni>(s);
-        if (o==null)
+        if (o == null)
         {
             DateTime d = DateTime.Now;
             o = new Opzioni();

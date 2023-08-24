@@ -11,6 +11,7 @@
          to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
     <vm:MainViewModel />
   </Design.DataContext>
+
 	<Grid x:Name="background">
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition/>
@@ -28,7 +29,7 @@
 		<Image x:Name="backgroundImage" Source="/Assets/background.jpg" Stretch="Fill" Grid.RowSpan="7" Grid.ColumnSpan="2"/>
 		<Label Grid.Row="0" Grid.Column="0" Content="Name: " Foreground="White"/>
 		<TextBox x:Name="nome" Grid.Row="0" Grid.Column="1" Text="" Foreground="White"/>
-		<Label Grid.Row="1" Grid.Column="0" Content="Insert the date: " Foreground="White"/>
+		<Label Grid.Row="1" Grid.Column="0" Content="Insert a date: " Foreground="White"/>
 		<DatePicker x:Name="data" Grid.Row="1" Grid.Column="1" Foreground="White"/>
 		<Button x:Name="calcola" Content="Calculate" Click="Calcola_Click" Grid.Row="2" Grid.Column="1" Foreground="White"/>
 		<Label x:Name="risultato" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White"/>
