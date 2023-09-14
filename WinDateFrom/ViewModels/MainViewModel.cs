@@ -2,6 +2,7 @@
 using DynamicData;
 using System.IO;
 using System;
+using Avalonia.Controls;
 
 namespace WinDateFrom.ViewModels;
 
@@ -9,7 +10,7 @@ public class MainViewModel : ViewModelBase
 {
 
     private static Opzioni o;
-    public static readonly string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+    public static readonly string path = $"{Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)}{App.fileseparator}WinDateFrom";
     public static void CaricaOpzioni()
     {
         LeggiOpzioni(path);
@@ -21,7 +22,7 @@ public class MainViewModel : ViewModelBase
         StreamReader file;
         try
         {
-            file = new StreamReader(folder + "opzioni.json");
+            file = new StreamReader($"{folder}{App.fileseparator}opzioni.json");
         }
         catch (FileNotFoundException ex)
         {
@@ -35,7 +36,13 @@ public class MainViewModel : ViewModelBase
         }
         string s = file.ReadToEnd();
         file.Close();
-        o = Newtonsoft.Json.JsonConvert.DeserializeObject<Opzioni>(s);
+        try
+        {
+            o = Newtonsoft.Json.JsonConvert.DeserializeObject<Opzioni>(s);
+        } catch (Newtonsoft.Json.JsonReaderException ex)
+        {
+            o = null;
+        }
         if (o == null)
         {
             DateTime d = DateTime.Now;
@@ -56,7 +63,7 @@ public class MainViewModel : ViewModelBase
         o.day = d;
         o.month = m;
         o.year = y;
-        StreamWriter w = new StreamWriter(folder + "opzioni.json");
+        StreamWriter w = new StreamWriter($"{folder}{App.fileseparator}opzioni.json");
         w.Write(Newtonsoft.Json.JsonConvert.SerializeObject(o));
         w.Close();
         return true;

@@ -9,6 +9,8 @@ namespace WinDateFrom;
 
 public partial class App : Application
 {
+
+    public static string fileseparator="\\";
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
