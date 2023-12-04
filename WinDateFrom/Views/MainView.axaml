@@ -34,6 +34,7 @@
 		<Button x:Name="calcola" Content="Calculate" Click="Calcola_Click" Grid.Row="2" Grid.Column="1" Foreground="White"/>
 		<Label x:Name="risultato" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White"/>
 		<Label x:Name="anniversario" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White"/>
+		<Label x:Name="auguri" Grid.Row="2" Grid.Column="0" IsVisible="false" Content="Wish a happy anniversary" Click="Auguri_Click" />
 		<TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White">This want to be a replacement in avalonia for the lucky app WinDateFrom in maui, and is dedicate to the bartress who make me happy, not "happy", in the Max Bar of Rivisondoli on summer 2021</TextBlock>
 		<TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White">ⓒ Giulio Sorrentino 2023 some right reserved. This app is under GPLv3 or, in your humble opinion, any later version.</TextBlock>
 	</Grid>
