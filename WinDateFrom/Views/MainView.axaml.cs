@@ -9,6 +9,7 @@ namespace WinDateFrom.Views;
 
 public partial class MainView : UserControl
 {
+    private string ricorrenza="";
     public MainView()
     {
         InitializeComponent();
@@ -28,14 +29,19 @@ public partial class MainView : UserControl
             risultato.Content = "Invalid rvalue";
             return;
         }
+        ricorrenza=""
         if (differenza.Days > 1)
         {
             if (d.Day == data.SelectedDate.Value.Day)
-                if (d.Month == data.SelectedDate.Value.Month)
+                if (d.Month == data.SelectedDate.Value.Month) {
                     anniversario.Content = "Is your anniversary";
-                else
+                    ricorrenza="anniversary";
+               } else {
                     anniversario.Content = "Is your mesiversary";
+                    ricorrenza="meiversary";
+                }
         }
+        anniversario.IsVisble=(ricorrenza!="" && nome!="")
         if (nome.Text == "")
             risultato.Content = $"{differenza.Days} days are passed";
         else
@@ -44,5 +50,12 @@ public partial class MainView : UserControl
             anniversario.Content = "Impossibile salvare le opzioni";
     }
 
-
-}
+    private void Anniversario_Click(object sender, RoutedEventArgs e)
+    {
+            var psi = new ProcessStartInfo
+            {
+                FileName = $"https://twitter.com/intent/tweet?text=Happy {ricorrenza} my love.",
+                UseShellExecute = true
+            };
+            fpShare.IsEnabled = false;
+            Process.Start(psi);}
