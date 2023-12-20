@@ -10,19 +10,20 @@ public class MainViewModel : ViewModelBase
 {
 
     private static Opzioni o;
-    public static readonly string path = $"{Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)}{App.fileseparator}WinDateFrom";
+    public static readonly string PathName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"WinDateFrom");
+    public static readonly string FileName = "opzioni.json";
     public static void CaricaOpzioni()
     {
-        LeggiOpzioni(path);
+        LeggiOpzioni();
     }
-    private static void LeggiOpzioni(String folder)
+    private static void LeggiOpzioni()
     {
-        if (!Directory.Exists(folder))
-            Directory.CreateDirectory(folder);
+        if (!Directory.Exists(PathName))
+            Directory.CreateDirectory(PathName);
         StreamReader file;
         try
         {
-            file = new StreamReader($"{folder}{App.fileseparator}opzioni.json");
+            file = new StreamReader(Path.Combine(PathName, FileName));
         }
         catch (FileNotFoundException ex)
         {
@@ -55,7 +56,7 @@ public class MainViewModel : ViewModelBase
         }
     }
 
-    public static bool SalvaOpzioni(String folder, String n, int d, int m, int y)
+    public static bool SalvaOpzioni(String n, int d, int m, int y)
     {
         if (d < 0 || m < 0 || y < 0)
             return false;
@@ -63,7 +64,7 @@ public class MainViewModel : ViewModelBase
         o.day = d;
         o.month = m;
         o.year = y;
-        StreamWriter w = new StreamWriter($"{folder}{App.fileseparator}opzioni.json");
+        StreamWriter w = new StreamWriter(Path.Combine(PathName, FileName));
         w.Write(Newtonsoft.Json.JsonConvert.SerializeObject(o));
         w.Close();
         return true;

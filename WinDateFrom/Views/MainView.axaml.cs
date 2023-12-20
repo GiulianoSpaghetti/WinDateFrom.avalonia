@@ -5,12 +5,13 @@ using Avalonia.Interactivity;
 using System.IO;
 using WinDateFrom.ViewModels;
 using System.Diagnostics;
+using Xamarin.Essentials;
 
 namespace WinDateFrom.Views;
 
 public partial class MainView : UserControl
 {
-    private string ricorrenza = "";
+    private static string ricorrenza = "";
     public MainView()
     {
         InitializeComponent();
@@ -42,26 +43,21 @@ public partial class MainView : UserControl
                 else
                 {
                     anniversario.Content = "Is your mesiversary";
-                    ricorrenza = "meiversary";
+                    ricorrenza = "mesiversary";
                 }
         }
         if (nome.Text == "")
             risultato.Content = $"{differenza.Days} days are passed";
         else
             risultato.Content = $"You met {nome.Text} about {differenza.Days} days ago.";
-        if (!MainViewModel.SalvaOpzioni(MainViewModel.path, nome.Text, data.SelectedDate.Value.Day, data.SelectedDate.Value.Month, data.SelectedDate.Value.Year))
+        if (!MainViewModel.SalvaOpzioni(nome.Text, data.SelectedDate.Value.Day, data.SelectedDate.Value.Month, data.SelectedDate.Value.Year))
             anniversario.Content = "Impossibile salvare le opzioni";
     }
 
     private void Auguri_Click(object sender, RoutedEventArgs e)
     {
-        var psi = new ProcessStartInfo
-        {
-            FileName = $"https://twitter.com/intent/tweet?text=Happy {ricorrenza} my love.",
-            UseShellExecute = true
-        };
         if (ricorrenza != "" && nome.Text != "")
-            Process.Start(psi);
+            Browser.OpenAsync($"https://twitter.com/intent/tweet?text=Happy%20{ricorrenza}%20my%20love.");
         else
             anniversario.Content = "You cannot do it right now";
     }
