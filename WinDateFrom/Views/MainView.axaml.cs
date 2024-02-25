@@ -22,8 +22,8 @@ public partial class MainView : UserControl
 
     private void Calcola_Click(object sender, RoutedEventArgs e)
     {
-        risultato.Content = "";
-        anniversario.Content = "";
+        calcola.IsEnabled = false;
+        nome.Text = nome.Text.Trim();
         DateTime d = DateTime.Now;
         TimeSpan differenza = d - data.SelectedDate.Value;
         if (differenza.Milliseconds < 0)
@@ -52,13 +52,15 @@ public partial class MainView : UserControl
             risultato.Content = $"You met {nome.Text} about {differenza.Days} days ago.";
         if (!MainViewModel.SalvaOpzioni(nome.Text, data.SelectedDate.Value.Day, data.SelectedDate.Value.Month, data.SelectedDate.Value.Year))
             anniversario.Content = "Impossibile salvare le opzioni";
+        auguri.IsVisible = ricorrenza != "" && nome.Text != "";
     }
 
     private void Auguri_Click(object sender, RoutedEventArgs e)
     {
         if (ricorrenza != "" && nome.Text != "")
+        {
             Browser.OpenAsync($"https://twitter.com/intent/tweet?text=Happy%20{ricorrenza}%20my%20love.");
-        else
-            anniversario.Content = "You cannot do it right now";
+            auguri.IsVisible = false;
+        }
     }
 }
