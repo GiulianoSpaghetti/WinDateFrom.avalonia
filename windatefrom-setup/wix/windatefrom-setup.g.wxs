@@ -149,12 +149,20 @@
           <File Id="WinDateFrom.Desktop.exe_145947473" Source="WinDateFrom.Desktop.exe" />
         </Component>
 
+        <Component Id="Component.WinDateFrom.Desktop.pdb_957675683" Guid="a2941143-09e9-45ad-8017-0db4ed78362b" Bitness="always64">
+          <File Id="WinDateFrom.Desktop.pdb_957675683" Source="WinDateFrom.Desktop.pdb" />
+        </Component>
+
         <Component Id="Component.WinDateFrom.Desktop.runtimeconfig.json_2083791225" Guid="a2941143-09e9-45ad-8017-0db4348895ed" Bitness="always64">
           <File Id="WinDateFrom.Desktop.runtimeconfig.json_2083791225" Source="WinDateFrom.Desktop.runtimeconfig.json" />
         </Component>
 
         <Component Id="Component.WinDateFrom.dll_2322186567" Guid="a2941143-09e9-45ad-8017-0db4ac1850ff" Bitness="always64">
           <File Id="WinDateFrom.dll_2322186567" Source="WinDateFrom.dll" />
+        </Component>
+
+        <Component Id="Component.WinDateFrom.pdb_2238396541" Guid="a2941143-09e9-45ad-8017-0db475ea4d16" Bitness="always64">
+          <File Id="WinDateFrom.pdb_2238396541" Source="WinDateFrom.pdb" />
         </Component>
 
         <Component Id="Component.Xamarin.Essentials.dll_2133111193" Guid="a2941143-09e9-45ad-8017-0db491da94ab" Bitness="always64">
@@ -239,8 +247,10 @@
       <ComponentRef Id="Component.WinDateFrom.Desktop.deps.json_376189292" />
       <ComponentRef Id="Component.WinDateFrom.Desktop.dll_873885669" />
       <ComponentRef Id="Component.WinDateFrom.Desktop.exe_145947473" />
+      <ComponentRef Id="Component.WinDateFrom.Desktop.pdb_957675683" />
       <ComponentRef Id="Component.WinDateFrom.Desktop.runtimeconfig.json_2083791225" />
       <ComponentRef Id="Component.WinDateFrom.dll_2322186567" />
+      <ComponentRef Id="Component.WinDateFrom.pdb_2238396541" />
       <ComponentRef Id="Component.Xamarin.Essentials.dll_2133111193" />
       <ComponentRef Id="Component.av_libglesv2.dll_1514959806" />
       <ComponentRef Id="Component.libHarfBuzzSharp.dll_313259825" />
