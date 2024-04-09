@@ -53,14 +53,18 @@ public partial class MainView : UserControl
         if (!MainViewModel.SalvaOpzioni(nome.Text, data.SelectedDate.Value.Day, data.SelectedDate.Value.Month, data.SelectedDate.Value.Year))
             anniversario.Content = "Impossibile salvare le opzioni";
         auguri.IsVisible = ricorrenza != "" && nome.Text != "";
+        calcola.IsEnabled = false;
     }
 
     private void Auguri_Click(object sender, RoutedEventArgs e)
     {
-        if (ricorrenza != "" && nome.Text != "")
         {
-            Browser.OpenAsync($"https://twitter.com/intent/tweet?text=Happy%20{ricorrenza}%20my%20love.");
-            auguri.IsVisible = false;
+            var psi = new ProcessStartInfo
+            {
+                FileName = $"https://twitter.com/intent/tweet?text=Happy%20{ricorrenza}%20my%20love.",
+                UseShellExecute = true
+            };
+            Process.Start(psi);
         }
     }
 }
