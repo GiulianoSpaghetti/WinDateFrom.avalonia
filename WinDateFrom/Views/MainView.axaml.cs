@@ -5,7 +5,6 @@ using Avalonia.Interactivity;
 using System.IO;
 using WinDateFrom.ViewModels;
 using System.Diagnostics;
-using Xamarin.Essentials;
 
 namespace WinDateFrom.Views;
 
@@ -58,13 +57,12 @@ public partial class MainView : UserControl
 
     private void Auguri_Click(object sender, RoutedEventArgs e)
     {
-        {
             var psi = new ProcessStartInfo
             {
                 FileName = $"https://twitter.com/intent/tweet?text=Happy%20{ricorrenza}%20my%20love.",
                 UseShellExecute = true
             };
             Process.Start(psi);
-        }
+        auguri.IsEnabled = false;
     }
 }
