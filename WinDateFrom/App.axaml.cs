@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-
+using System.Globalization;
 using WinDateFrom.ViewModels;
 using WinDateFrom.Views;
 
@@ -12,6 +12,8 @@ public partial class App : Application
 
     public override void Initialize()
     {
+        CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
+
         AvaloniaXamlLoader.Load(this);
     }
 
