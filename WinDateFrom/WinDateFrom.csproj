@@ -17,7 +17,7 @@
     <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.10" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.10" />
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-    <PackageReferenceInclude="Avalonia.Diagnostics" Version="11.0.10" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="11.0.10" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
   </ItemGroup>
