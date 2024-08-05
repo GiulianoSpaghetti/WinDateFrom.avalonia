@@ -5,8 +5,6 @@ VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinDateFrom", "WinDateFrom\WinDateFrom.csproj", "{FD2EDA76-4D9D-43AA-A303-3C76254477D5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinDateFrom.Android", "WinDateFrom.Android\WinDateFrom.Android.csproj", "{4DFE7767-FE52-4E33-8393-22ECD2A54C68}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinDateFrom.Desktop", "WinDateFrom.Desktop\WinDateFrom.Desktop.csproj", "{39760E67-8A15-4EF5-9189-691F22A4DD2B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "windatefrom-setup", "windatefrom-setup\windatefrom-setup.csproj", "{9DE767D2-4409-40A1-A5D2-A1E7277DA381}"
