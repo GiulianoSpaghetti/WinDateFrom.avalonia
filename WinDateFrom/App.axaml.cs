@@ -11,14 +11,8 @@ public partial class App : Application
 {
     public static bool IsDesktop = false;
     public override void Initialize()
-<<<<<<< HEAD
-    {
-        System.Globalization.CultureInfo.DefaultThreadCurrentCulture=new System.Globalization.CultureInfo("en-US");
-=======
     {
         CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
-
->>>>>>> 647e5c7d96c9a9b1b5879bc87219cb768ede2441
         AvaloniaXamlLoader.Load(this);
     }
 
