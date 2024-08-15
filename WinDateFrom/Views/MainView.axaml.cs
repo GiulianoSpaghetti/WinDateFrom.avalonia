@@ -5,11 +5,7 @@ using Avalonia.Interactivity;
 using System.IO;
 using WinDateFrom.ViewModels;
 using System.Diagnostics;
-<<<<<<< HEAD
 using System.Runtime.InteropServices;
-using Avalonia.Controls.ApplicationLifetimes;
-=======
->>>>>>> 647e5c7d96c9a9b1b5879bc87219cb768ede2441
 
 namespace WinDateFrom.Views;
 
@@ -62,24 +58,18 @@ public partial class MainView : UserControl
 
     private void Auguri_Click(object sender, RoutedEventArgs e)
     {
-<<<<<<< HEAD
-        if (!App.IsDesktop)
+       if (!App.IsDesktop)
             risultato.Content = "Operation currently not supported";
         else
         {
             ProcessStartInfo psi = new ProcessStartInfo
-=======
             var psi = new ProcessStartInfo
->>>>>>> 647e5c7d96c9a9b1b5879bc87219cb768ede2441
             {
                 FileName = $"https://twitter.com/intent/tweet?text=Happy%20{ricorrenza}%20my%20love.",
                 UseShellExecute = true
             };
             Process.Start(psi);
-<<<<<<< HEAD
         }
-=======
->>>>>>> 647e5c7d96c9a9b1b5879bc87219cb768ede2441
         auguri.IsEnabled = false;
     }
 }
