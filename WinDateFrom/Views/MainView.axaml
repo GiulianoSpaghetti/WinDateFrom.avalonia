@@ -36,8 +36,8 @@
 		<Button x:Name="calcola" Content="Calculate" Click="Calcola_Click" Grid.Row="2" Grid.Column="0" Foreground="White"/>
 		<Label x:Name="risultato" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White"/>
 		<Label x:Name="anniversario" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White"/>
-		<TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White"> This application is dedicated to the bartress in the Max Bar of Rivisondoli on summer 2021, who proposed the "wish a happy anniversary" button and became my girlfriend after 3 years of courtship with the idea developed over time which transformed into this app. (07-21-2024)</TextBlock>
-		<TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White">A simple usage of this application, according to her, is a run-one-time-only button. Recompiled with avalonia 11.0.6.</TextBlock>
+		<TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White"> This app is dedicated to my health inspector who pretended to be the Rivisondoli bartender and created chemistry just to meet me (10-12-2024)</TextBlock>
+		<TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White">A simple usage of this application, according to her, is a run-one-time-only button. Recompiled with avalonia 11.1.4.</TextBlock>
 		<TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center"  Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" Foreground="White">ⓒ Giulio Sorrentino 2023-2024 some right reserved. This app is under GPLv3 or, in your humble opinion, any later version.</TextBlock>
 	</Grid>
 </UserControl>

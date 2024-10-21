@@ -6,6 +6,7 @@ using System.IO;
 using WinDateFrom.ViewModels;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using Avalonia.Controls.ApplicationLifetimes;
 
 namespace WinDateFrom.Views;
 
@@ -52,18 +53,17 @@ public partial class MainView : UserControl
             risultato.Content = $"You met {nome.Text} about {differenza.Days} days ago.";
         if (!MainViewModel.SalvaOpzioni(nome.Text, data.SelectedDate.Value.Day, data.SelectedDate.Value.Month, data.SelectedDate.Value.Year))
             anniversario.Content = "Impossibile salvare le opzioni";
-        auguri.IsVisible = ricorrenza != "" && nome.Text != "";
+        auguri.IsVisible = anniversario.IsVisible = ricorrenza != "" && nome.Text != "";
         calcola.IsEnabled = false;
     }
 
     private void Auguri_Click(object sender, RoutedEventArgs e)
     {
-       if (!App.IsDesktop)
+        if (!App.IsDesktop)
             risultato.Content = "Operation currently not supported";
         else
         {
             ProcessStartInfo psi = new ProcessStartInfo
-            var psi = new ProcessStartInfo
             {
                 FileName = $"https://twitter.com/intent/tweet?text=Happy%20{ricorrenza}%20my%20love.",
                 UseShellExecute = true
