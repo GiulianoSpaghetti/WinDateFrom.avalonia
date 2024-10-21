@@ -27,13 +27,13 @@ namespace windatefrom_setup
             );
 
             project.GUID = new Guid("A2941143-09E9-45AD-8017-0DB4C98D80D2");
-            project.Version = new Version("0.8.9");
+            project.Version = new Version("4.6.2");
             project.Platform = Platform.x64;
-            project.SourceBaseDir = "F:\\source\\WinDateFrom.avalonia\\WinDateFrom.Desktop\\bin\\Release\\net8.0";
+            project.SourceBaseDir = "D:\\source\\WinDateFrom.avalonia\\WinDateFrom.Desktop\\bin\\Release\\net8.0-windows10.0.22621.0";
             project.LicenceFile = "LICENSE.rtf";
-            project.OutDir = "f:\\";
+            project.OutDir = "D:\\";
             project.ControlPanelInfo.Manufacturer = "Giulio Sorrentino";
-            project.ControlPanelInfo.Name = "CBriscola.Avalonia";
+            project.ControlPanelInfo.Name = "WinDateFrom.Avalonia";
             project.ControlPanelInfo.HelpLink = "https://github.com/numerunix/WinDateFrom.Avalonia/issues";
             project.Description = "Un semplice programma per calcolare quanto tempo è passato da un incontro.";
             //            project.Properties.SetValue("ALLUSERS", 0);
