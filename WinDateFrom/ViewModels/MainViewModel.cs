@@ -43,6 +43,9 @@ public class MainViewModel : ViewModelBase
         } catch (Newtonsoft.Json.JsonReaderException ex)
         {
             o = null;
+        } catch (Newtonsoft.Json.JsonSerializationException ex)
+        {
+            o = null;
         }
         if (o == null)
         {
