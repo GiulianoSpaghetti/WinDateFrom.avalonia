@@ -8,7 +8,7 @@ using Avalonia.ReactiveUI;
 namespace WinDateFrom.Android;
 
 [Activity(
-    Label = "WinDateFrom.Android",
+    Label = "WinDateFrom",
     Theme = "@style/MyTheme.NoActionBar",
     Icon = "@drawable/icon",
     MainLauncher = true,

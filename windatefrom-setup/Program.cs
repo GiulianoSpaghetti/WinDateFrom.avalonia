@@ -7,7 +7,7 @@ namespace windatefrom_setup
     {
         static void Main()
         {
-            var project = new Project("WinDateFrom.Avalonia",
+            Project project = new Project("WinDateFrom.Avalonia",
                               new Dir(@"[ProgramFiles64Folder]\\WinDateFrom.Avalonia",
                                   new DirFiles(@"*.*"),
                                   new Dir("runtimes",
@@ -27,9 +27,9 @@ namespace windatefrom_setup
             );
 
             project.GUID = new Guid("A2941143-09E9-45AD-8017-0DB4C98D80D2");
-            project.Version = new Version("4.6.2");
+            project.Version = new Version("4.6.4");
             project.Platform = Platform.x64;
-            project.SourceBaseDir = "D:\\source\\WinDateFrom.avalonia\\WinDateFrom.Desktop\\bin\\Release\\net8.0-windows10.0.22621.0";
+            project.SourceBaseDir = "D:\\source\\WinDateFrom.avalonia\\WinDateFrom.Desktop\\bin\\Release\\net9.0-windows10.0.26100.0";
             project.LicenceFile = "LICENSE.rtf";
             project.OutDir = "D:\\";
             project.ControlPanelInfo.Manufacturer = "Giulio Sorrentino";

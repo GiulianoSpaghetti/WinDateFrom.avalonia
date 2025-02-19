@@ -1,7 +1,7 @@
 ﻿using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-
+using System.Globalization;
 using WinDateFrom.ViewModels;
 using WinDateFrom.Views;
 
@@ -9,10 +9,9 @@ namespace WinDateFrom;
 
 public partial class App : Application
 {
-    public static bool IsDesktop = false;
     public override void Initialize()
     {
-        System.Globalization.CultureInfo.DefaultThreadCurrentCulture=new System.Globalization.CultureInfo("en-US");
+        CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
         AvaloniaXamlLoader.Load(this);
     }
 
@@ -20,7 +19,6 @@ public partial class App : Application
     {
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            IsDesktop = true;
             desktop.MainWindow = new MainWindow
             {
                 DataContext = new MainViewModel()
