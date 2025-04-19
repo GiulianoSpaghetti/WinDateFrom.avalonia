@@ -3,20 +3,106 @@ using DynamicData;
 using System.IO;
 using System;
 using Avalonia.Controls;
+using ReactiveUI;
+using System.Net;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace WinDateFrom.ViewModels;
 
 public class MainViewModel : ViewModelBase
 {
 
-    private static Opzioni o;
-    public static readonly string PathName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"WinDateFrom");
-    public static readonly string FileName = "opzioni.json";
-    public static void CaricaOpzioni()
+    internal Opzioni o;
+    private readonly string PathName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"WinDateFrom");
+    private readonly string FileName = "opzioni.json";
+    public DateTimeOffset _data;
+    public string ricorrenza = string.Empty;
+    private string _nome = string.Empty;
+    private string _risultato=string.Empty;
+    private string _anniversario = string.Empty;
+    private bool _calcolaEnable = true;
+    public bool CalcolaEnable
+    {
+        get => _calcolaEnable;
+        set => this.RaiseAndSetIfChanged(ref _calcolaEnable, value);
+    }
+
+    private bool _auguraVisible = false;
+    public bool AuguraVisible
+    {
+        get => _auguraVisible;
+        set => this.RaiseAndSetIfChanged(ref _auguraVisible, value);
+    }
+    public string Risultato
+    {
+        get => _risultato;
+        set => this.RaiseAndSetIfChanged(ref _risultato, value);
+    }
+    public string Anniversario
+    {
+        get => _anniversario;
+        set => this.RaiseAndSetIfChanged(ref _anniversario, value);
+    }
+    public string Nome
+    {
+        get => _nome;
+        set => this.RaiseAndSetIfChanged(ref _nome, value);
+    }
+    public DateTimeOffset Data
+    {
+        get => _data;
+        set => this.RaiseAndSetIfChanged(ref _data, value);
+    }
+
+    public MainViewModel()
+    {
+        o = new Opzioni();
+        LeggiOpzioni();
+        _data = new DateTimeOffset(new DateTime(o.year, o.month, o.day));
+        _nome = o.Nome;
+    }
+    public void CaricaOpzioni()
     {
         LeggiOpzioni();
+
     }
-    private static void LeggiOpzioni()
+
+
+    public void Calcola_Click()
+    {
+        _nome = _nome.Trim();
+        DateTime d = DateTime.Now;
+        TimeSpan differenza = d - _data;
+        if (differenza.Milliseconds < 0)
+        {
+            Risultato = "Invalid rvalue";
+            return;
+        }
+        if (differenza.Days > 1)
+        {
+            if (d.Day == _data.Day)
+                if (d.Month == _data.Month)
+                {
+                    Anniversario = "Is your anniversary";
+                    ricorrenza = "anniversary";
+                }
+                else
+                {
+                    Anniversario = "Is your mesiversary";
+                    ricorrenza = "mesiversary";
+                }
+        }
+        if (_nome == "")
+            Risultato = $"{differenza.Days} days are passed";
+        else
+            Risultato = $"You met {_nome} about {differenza.Days} days ago.";
+        if (!SalvaOpzioni())
+           Anniversario = "Impossibile salvare le opzioni";
+        AuguraVisible = ricorrenza != "" && Nome != "";
+        CalcolaEnable = false;
+    }
+
+    private void LeggiOpzioni()
     {
         if (!Directory.Exists(PathName))
             Directory.CreateDirectory(PathName);
@@ -59,22 +145,16 @@ public class MainViewModel : ViewModelBase
         }
     }
 
-    public static bool SalvaOpzioni(String n, int d, int m, int y)
+    public bool SalvaOpzioni()
     {
-        if (d < 0 || m < 0 || y < 0)
-            return false;
-        o.Nome = n;
-        o.day = d;
-        o.month = m;
-        o.year = y;
+        o.Nome = Nome;
+        o.day = Data.Day;
+        o.month = Data.Month;
+        o.year = Data.Year;
         StreamWriter w = new StreamWriter(Path.Combine(PathName, FileName));
         w.Write(Newtonsoft.Json.JsonConvert.SerializeObject(o));
         w.Close();
         return true;
     }
 
-    public static String GetNome() { return o.Nome; }
-    public static int GetGiorno() { return o.day; }
-    public static int GetMese() { return o.month; }
-    public static int GetAnno() { return o.year; }
 }

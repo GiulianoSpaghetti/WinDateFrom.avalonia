@@ -5,7 +5,7 @@
     <SupportedOSPlatformVersion>29.0</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ApplicationId>org.altervista.numerone.windatefrom</ApplicationId>
-    <ApplicationVersion>53</ApplicationVersion>
+    <ApplicationVersion>55</ApplicationVersion>
     <ApplicationDisplayVersion>4.7</ApplicationDisplayVersion>
     <AndroidPackageFormat>aab</AndroidPackageFormat>
     <AndroidEnableProfiledAot>False</AndroidEnableProfiledAot>
@@ -24,18 +24,19 @@
 	
 
 	<ItemGroup>
-	  <PackageReference Include="Avalonia.Android" Version="11.2.4" />
+	  <PackageReference Include="Avalonia.Android" Version="11.2.7" />
 	  <PackageReference Include="Avalonia.BuildServices" Version="0.0.31" />
-	  <PackageReference Include="DynamicData" Version="9.1.2" />
+	  <PackageReference Include="DynamicData" Version="9.2.1" />
 	  <PackageReference Include="HarfBuzzSharp" Version="8.3.0.1" />
 	  <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="8.3.0.1" />
 	  <PackageReference Include="HarfBuzzSharp.NativeAssets.WebAssembly" Version="8.3.0.1" />
-	  <PackageReference Include="ReactiveUI" Version="20.1.63" />
+	  <PackageReference Include="ReactiveUI" Version="20.2.45" />
 	  <PackageReference Include="SkiaSharp" Version="3.116.1" />
 	  <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="3.116.1" />
 	  <PackageReference Include="SkiaSharp.NativeAssets.WebAssembly" Version="3.116.1" />
 	  <PackageReference Include="Splat" Version="15.3.1" />
-	  <PackageReference Include="Xamarin.AndroidX.Activity" Version="1.10.0" />
+	  <PackageReference Include="System.Text.Json" Version="9.0.4" />
+	  <PackageReference Include="Xamarin.AndroidX.Activity" Version="1.10.1" />
 	  <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.9.1.2" />
 	  <PackageReference Include="Xamarin.AndroidX.Annotation.Experimental" Version="1.4.1.8" />
 	  <PackageReference Include="Xamarin.AndroidX.Annotation.Jvm" Version="1.9.1.2" />
@@ -53,7 +54,7 @@
 	  <PackageReference Include="Xamarin.AndroidX.DrawerLayout" Version="1.2.0.15" />
 	  <PackageReference Include="Xamarin.AndroidX.Emoji2" Version="1.5.0.3" />
 	  <PackageReference Include="Xamarin.AndroidX.Emoji2.ViewsHelper" Version="1.5.0.3" />
-	  <PackageReference Include="Xamarin.AndroidX.Fragment" Version="1.8.5.2" />
+	  <PackageReference Include="Xamarin.AndroidX.Fragment" Version="1.8.6" />
 	  <PackageReference Include="Xamarin.AndroidX.Interpolator" Version="1.0.0.31" />
 	  <PackageReference Include="Xamarin.AndroidX.Lifecycle.Common" Version="2.8.7.2" />
 	  <PackageReference Include="Xamarin.AndroidX.Lifecycle.Common.Jvm" Version="2.8.7.2" />
@@ -71,10 +72,10 @@
 	  <PackageReference Include="Xamarin.AndroidX.Tracing.Tracing" Version="1.2.0.9" />
 	  <PackageReference Include="Xamarin.AndroidX.VectorDrawable" Version="1.2.0.5" />
 	  <PackageReference Include="Xamarin.AndroidX.VectorDrawable.Animated" Version="1.2.0.5" />
-	  <PackageReference Include="Xamarin.AndroidX.VersionedParcelable" Version="1.2.0.9" />
+	  <PackageReference Include="Xamarin.AndroidX.VersionedParcelable" Version="1.2.1" />
 	  <PackageReference Include="Xamarin.AndroidX.ViewPager" Version="1.1.0.1" />
 	  <PackageReference Include="Xamarin.Google.Guava.ListenableFuture" Version="1.0.0.26" />
-	  <PackageReference Include="Xamarin.Jetbrains.Annotations" Version="26.0.1.2" />
+	  <PackageReference Include="Xamarin.Jetbrains.Annotations" Version="26.0.2" />
 	  <PackageReference Include="Xamarin.Kotlin.StdLib" Version="2.0.21.2" />
 	  <PackageReference Include="Xamarin.KotlinX.AtomicFU" Version="0.26.1.1" />
 	  <PackageReference Include="Xamarin.KotlinX.AtomicFU.Jvm" Version="0.26.1.1" />

@@ -6,7 +6,7 @@
     To suppress generation of this file remove `set ide=true` from the PostBuildEvent of the VS project
 </auto-generated>
 -->
-  <Package Compressed="yes" ProductCode="a2941143-09e9-45ad-8017-0db409edd0d2" Name="WinDateFrom.Avalonia" Language="1033" Version="4.6.4" UpgradeCode="a2941143-09e9-45ad-8017-0db4c98d80d2" Manufacturer="Giulio Sorrentino" InstallerVersion="200">
+  <Package Compressed="yes" ProductCode="a2941143-09e9-45ad-8017-0db409fd80d4" Name="WinDateFrom.Avalonia" Language="1033" Version="4.7.0.1" UpgradeCode="a2941143-09e9-45ad-8017-0db4c98d80d2" Manufacturer="Giulio Sorrentino" InstallerVersion="200">
     <SummaryInformation Codepage="Windows-1252" Description="Un semplice programma per calcolare quanto tempo è passato da un incontro." />
     <Media Id="1" Cabinet="WinDateFrom.Avalonia_.cab" EmbedCab="yes" />
 
@@ -15,6 +15,14 @@
 
         <Component Id="Component.Avalonia.Base.dll_61354178" Guid="a2941143-09e9-45ad-8017-0db44715a28f" Bitness="always64">
           <File Id="Avalonia.Base.dll_61354178" Source="Avalonia.Base.dll" />
+        </Component>
+
+        <Component Id="Component.Avalonia.Controls.ColorPicker.dll_3615254434" Guid="a2941143-09e9-45ad-8017-0db4385d98e8" Bitness="always64">
+          <File Id="Avalonia.Controls.ColorPicker.dll_3615254434" Source="Avalonia.Controls.ColorPicker.dll" />
+        </Component>
+
+        <Component Id="Component.Avalonia.Controls.DataGrid.dll_2614228953" Guid="a2941143-09e9-45ad-8017-0db40f3208f1" Bitness="always64">
+          <File Id="Avalonia.Controls.DataGrid.dll_2614228953" Source="Avalonia.Controls.DataGrid.dll" />
         </Component>
 
         <Component Id="Component.Avalonia.Controls.dll_3735077800" Guid="a2941143-09e9-45ad-8017-0db4ea051028" Bitness="always64">
@@ -83,6 +91,10 @@
 
         <Component Id="Component.Avalonia.Themes.Fluent.dll_3905619654" Guid="a2941143-09e9-45ad-8017-0db4789e7e86" Bitness="always64">
           <File Id="Avalonia.Themes.Fluent.dll_3905619654" Source="Avalonia.Themes.Fluent.dll" />
+        </Component>
+
+        <Component Id="Component.Avalonia.Themes.Simple.dll_2946410489" Guid="a2941143-09e9-45ad-8017-0db41f5382e6" Bitness="always64">
+          <File Id="Avalonia.Themes.Simple.dll_2946410489" Source="Avalonia.Themes.Simple.dll" />
         </Component>
 
         <Component Id="Component.Avalonia.Vulkan.dll_970226635" Guid="a2941143-09e9-45ad-8017-0db42d53631a" Bitness="always64">
@@ -210,7 +222,7 @@
 
     <WixUI Id="WixUI_Minimal" xmlns="http://wixtoolset.org/schemas/v4/wxs/ui" />
 
-    <WixVariable Id="WixUILicenseRtf" Value="D:\source\WinDateFrom.avalonia\WinDateFrom.Desktop\bin\Release\net9.0-windows10.0.26100.0\LICENSE.rtf" />
+    <WixVariable Id="WixUILicenseRtf" Value="f:\source\WinDateFrom.avalonia\WinDateFrom.Desktop\bin\Release\net9.0-windows10.0.26100.0\LICENSE.rtf" />
 
     <UIRef Id="WixUI_ErrorProgressText" />
 
@@ -218,6 +230,8 @@
 
     <Feature Id="Complete" Title="Complete" Level="1" AllowAbsent="yes">
       <ComponentRef Id="Component.Avalonia.Base.dll_61354178" />
+      <ComponentRef Id="Component.Avalonia.Controls.ColorPicker.dll_3615254434" />
+      <ComponentRef Id="Component.Avalonia.Controls.DataGrid.dll_2614228953" />
       <ComponentRef Id="Component.Avalonia.Controls.dll_3735077800" />
       <ComponentRef Id="Component.Avalonia.DesignerSupport.dll_1874906707" />
       <ComponentRef Id="Component.Avalonia.Desktop.dll_924661861" />
@@ -235,6 +249,7 @@
       <ComponentRef Id="Component.Avalonia.Remote.Protocol.dll_3603431981" />
       <ComponentRef Id="Component.Avalonia.Skia.dll_3255417520" />
       <ComponentRef Id="Component.Avalonia.Themes.Fluent.dll_3905619654" />
+      <ComponentRef Id="Component.Avalonia.Themes.Simple.dll_2946410489" />
       <ComponentRef Id="Component.Avalonia.Vulkan.dll_970226635" />
       <ComponentRef Id="Component.Avalonia.Win32.dll_2431086118" />
       <ComponentRef Id="Component.Avalonia.X11.dll_1195040020" />

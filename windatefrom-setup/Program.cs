@@ -27,11 +27,11 @@ namespace windatefrom_setup
             );
 
             project.GUID = new Guid("A2941143-09E9-45AD-8017-0DB4C98D80D2");
-            project.Version = new Version("4.6.4");
+            project.Version = new Version("4.7.0.1");
             project.Platform = Platform.x64;
-            project.SourceBaseDir = "D:\\source\\WinDateFrom.avalonia\\WinDateFrom.Desktop\\bin\\Release\\net9.0-windows10.0.26100.0";
+            project.SourceBaseDir = "f:\\source\\WinDateFrom.avalonia\\WinDateFrom.Desktop\\bin\\Release\\net9.0-windows10.0.26100.0";
             project.LicenceFile = "LICENSE.rtf";
-            project.OutDir = "D:\\";
+            project.OutDir = "f:\\";
             project.ControlPanelInfo.Manufacturer = "Giulio Sorrentino";
             project.ControlPanelInfo.Name = "WinDateFrom.Avalonia";
             project.ControlPanelInfo.HelpLink = "https://github.com/numerunix/WinDateFrom.Avalonia/issues";
