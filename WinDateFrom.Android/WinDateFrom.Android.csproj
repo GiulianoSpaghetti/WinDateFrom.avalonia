@@ -5,7 +5,7 @@
     <SupportedOSPlatformVersion>29.0</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
     <ApplicationId>org.altervista.numerone.windatefrom</ApplicationId>
-    <ApplicationVersion>55</ApplicationVersion>
+    <ApplicationVersion>56</ApplicationVersion>
     <ApplicationDisplayVersion>4.7</ApplicationDisplayVersion>
     <AndroidPackageFormat>aab</AndroidPackageFormat>
     <AndroidEnableProfiledAot>False</AndroidEnableProfiledAot>
@@ -24,7 +24,7 @@
 	
 
 	<ItemGroup>
-	  <PackageReference Include="Avalonia.Android" Version="11.2.7" />
+	  <PackageReference Include="Avalonia.Android" Version="11.2.8" />
 	  <PackageReference Include="Avalonia.BuildServices" Version="0.0.31" />
 	  <PackageReference Include="DynamicData" Version="9.2.1" />
 	  <PackageReference Include="HarfBuzzSharp" Version="8.3.0.1" />
