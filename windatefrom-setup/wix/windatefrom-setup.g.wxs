@@ -6,7 +6,7 @@
     To suppress generation of this file remove `set ide=true` from the PostBuildEvent of the VS project
 </auto-generated>
 -->
-  <Package Compressed="yes" ProductCode="a2941143-09e9-45ad-8017-0db409fd80d4" Name="WinDateFrom.Avalonia" Language="1033" Version="4.7.0.1" UpgradeCode="a2941143-09e9-45ad-8017-0db4c98d80d2" Manufacturer="Giulio Sorrentino" InstallerVersion="200">
+  <Package Compressed="yes" ProductCode="a2941143-09e9-45ad-8017-0db4198d80d3" Name="WinDateFrom.Avalonia" Language="1033" Version="5.0.0.0" UpgradeCode="a2941143-09e9-45ad-8017-0db4c98d80d2" Manufacturer="Giulio Sorrentino" InstallerVersion="200">
     <SummaryInformation Codepage="Windows-1252" Description="Un semplice programma per calcolare quanto tempo è passato da un incontro." />
     <Media Id="1" Cabinet="WinDateFrom.Avalonia_.cab" EmbedCab="yes" />
 

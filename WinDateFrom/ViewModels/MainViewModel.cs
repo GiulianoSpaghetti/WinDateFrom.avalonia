@@ -6,13 +6,14 @@ using Avalonia.Controls;
 using ReactiveUI;
 using System.Net;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Text.Json;
 
 namespace WinDateFrom.ViewModels;
 
 public class MainViewModel : ViewModelBase
 {
 
-    internal Opzioni o;
+    internal Opzioni? o;
     private readonly string PathName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"WinDateFrom");
     private readonly string FileName = "opzioni.json";
     public DateTimeOffset _data;
@@ -125,14 +126,18 @@ public class MainViewModel : ViewModelBase
         file.Close();
         try
         {
-            o = Newtonsoft.Json.JsonConvert.DeserializeObject<Opzioni>(s);
-        } catch (Newtonsoft.Json.JsonReaderException ex)
+            o =JsonSerializer.Deserialize<Opzioni>(s);
+        } catch (JsonException ex)
         {
             o = null;
-        } catch (Newtonsoft.Json.JsonSerializationException ex)
+        } catch (NotSupportedException ex1)
+        {
+            o = null;
+        } catch (ArgumentNullException ex2)
         {
             o = null;
         }
+
         if (o == null)
         {
             DateTime d = DateTime.Now;
@@ -152,7 +157,7 @@ public class MainViewModel : ViewModelBase
         o.month = Data.Month;
         o.year = Data.Year;
         StreamWriter w = new StreamWriter(Path.Combine(PathName, FileName));
-        w.Write(Newtonsoft.Json.JsonConvert.SerializeObject(o));
+        w.Write(JsonSerializer.Serialize(o));
         w.Close();
         return true;
     }
