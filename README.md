@@ -2,6 +2,11 @@
 Il primo programma per pc e per smartphone dedicato alle donne che non è un videogioco.
 Serve per rompere il ghiaccio durante una relazione interpersonale, ossia per approcciare.
 
+## ATTENZIONE
+
+Da quando sfrutta il pattern MVVM della microsoft il software è collegato alla IA di sistema.
+E' possibile farle leggere i dati.
+
 ## Come installare
 
 ## Su Windows
