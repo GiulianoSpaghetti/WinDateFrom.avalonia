@@ -1,7 +1,7 @@
 ﻿using System;
 
 using Avalonia;
-using Avalonia.ReactiveUI;
+using ReactiveUI.avalonia;
 
 namespace WinDateFrom.Desktop;
 
