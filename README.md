@@ -7,6 +7,10 @@ Serve per rompere il ghiaccio durante una relazione interpersonale, ossia per ap
 Da quando sfrutta il pattern MVVM della microsoft il software è collegato alla IA di sistema.
 E' possibile farle leggere i dati.
 
+## La dimostrazione dell'algoritmo
+
+L'algorimto brevettato è dimostrato sulla pagina di google play e la descrizione è sotto copyright, per cui vi lascio andare su quella pagina per leggerla.
+
 ## Come installare
 
 ## Su Windows
