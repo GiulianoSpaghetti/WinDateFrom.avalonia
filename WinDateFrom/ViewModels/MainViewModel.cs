@@ -13,6 +13,8 @@ namespace WinDateFrom.ViewModels;
 public class MainViewModel : ViewModelBase
 {
 
+
+    private static readonly int MinChars=3;
     internal Opzioni? o;
     private readonly string PathName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"WinDateFrom");
     private readonly string FileName = "opzioni.json";
@@ -71,7 +73,7 @@ public class MainViewModel : ViewModelBase
 
     public void Calcola_Click()
     {
-        _nome = _nome.Trim();
+        Nome = Nome.Trim();
         DateTime d = DateTime.Now;
         TimeSpan differenza = d - _data;
         if (differenza.Milliseconds < 0)
@@ -79,7 +81,7 @@ public class MainViewModel : ViewModelBase
             Risultato = "Invalid rvalue";
             return;
         }
-        if (differenza.Days > 1)
+        if (differenza.Days > 1 && Nome.Lenght=>MinChars)
         {
             if (d.Day == _data.Day)
                 if (d.Month == _data.Month)
@@ -93,13 +95,13 @@ public class MainViewModel : ViewModelBase
                     ricorrenza = "mesiversary";
                 }
         }
-        if (_nome == "")
+        if (Nome.Length<MinChars)
             Risultato = $"{differenza.Days} days are passed";
         else
-            Risultato = $"You met {_nome} about {differenza.Days} days ago.";
+            Risultato = $"You met {Nome} about {differenza.Days} days ago.";
         if (!SalvaOpzioni())
            Anniversario = "Impossibile salvare le opzioni";
-        AuguraVisible = ricorrenza != "" && Nome != "";
+        AuguraVisible = ricorrenza != ""
         CalcolaEnable = false;
     }
 
@@ -161,5 +163,6 @@ public class MainViewModel : ViewModelBase
         w.Close();
         return true;
     }
+
 
 }
