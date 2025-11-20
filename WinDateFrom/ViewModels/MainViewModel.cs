@@ -13,7 +13,7 @@ namespace WinDateFrom.ViewModels;
 public class MainViewModel : ViewModelBase
 {
 
-
+    //nessun nome di persona ha meno di 3 caratteri
     private static readonly int MinChars=3;
     internal Opzioni? o;
     private readonly string PathName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"WinDateFrom");
@@ -166,3 +166,4 @@ public class MainViewModel : ViewModelBase
 
 
 }
+
