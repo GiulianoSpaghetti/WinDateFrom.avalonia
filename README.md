@@ -18,7 +18,8 @@ La prima volta che vedete una che vi piace vi salvate la data, poi quando ci sar
 
 Oh che bel nome ce lo prendiamo un caffé insieme?" e se scatta la scintilla ed avete un computer con NPU potete corteggiarla dicendole di tanto in tanto, non sempre se no è snervante, il numero di giorni passati dal primo incontro, non dalla prima... (quella viene dopo!) tramite IA. Se poi vi fidanzate potete augurarle il mesiversario o l'anniversario sempre tramite IA.
 
-Se la scintilla non scatta dovete cancellare la cartlla %localappdata%\windatefrom
+Se la scintilla non scatta dovete cancellare la cartlla %localappdata%\windatefrom.
+
 E' utilissima per cortecciare!
 
 ## Come installare
