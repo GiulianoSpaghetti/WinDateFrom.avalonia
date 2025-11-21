@@ -11,8 +11,8 @@ E' possibile farle leggere i dati.
 
 Le donne adorano essere pensate, ma solo dagli uomini con cui si immaginano col vestito da sposa. Il punto è che il logorio della vita moderna fa sì che loro passano molto tempo insieme ma non si ricordano neanche
 come si chiamano.
-Per questo motivo ho creato un semplicissimo pannellino per salarsi una data e poi un nome.
-La prima volta ch vedete una che vi piace vi salvate la data, poi quando ci sarà il secondo, probabilmente molto casuale, incontro, le dite "ciao bella lo sai che noi ci siamo già visti? Si è così il... mi dici il tuo nome? Oh che bel nome ce lo prendiamo un caffé insieme?" e se scatta la scintilla ed avete un computer con NPU potete corteggiarla dicendole di tanto in tanto, non sempre se no è snervante, il numero di giorni passati dal primo incontro, non dalla prima... (quella viene dopo!) tramite IA. Se poi vi fidanzate potete augurarle il mesiversario o l'anniversario sempre tramite IA.
+Per questo motivo ho creato un semplicissimo pannellino per salvarsi una data e poi un nome.
+La prima volta che vedete una che vi piace vi salvate la data, poi quando ci sarà il secondo, probabilmente molto casuale, incontro, le dite "ciao bella lo sai che noi ci siamo già visti? Si è così il... mi dici il tuo nome? Oh che bel nome ce lo prendiamo un caffé insieme?" e se scatta la scintilla ed avete un computer con NPU potete corteggiarla dicendole di tanto in tanto, non sempre se no è snervante, il numero di giorni passati dal primo incontro, non dalla prima... (quella viene dopo!) tramite IA. Se poi vi fidanzate potete augurarle il mesiversario o l'anniversario sempre tramite IA.
 Se la scintilla non scatta dovete cancellare la cartlla %localappdata%\windatefrom
 E' utilissima per cortecciare!
 
