@@ -13,14 +13,18 @@ L'algorimto brevettato è dimostrato sulla pagina di google play e la descrizion
 
 ## Come installare
 
-## Su Windows
+### Su Windows
 
 [![winget](https://user-images.githubusercontent.com/49786146/159123313-3bdafdd3-5130-4b0d-9003-40618390943a.png)](https://winstall.app/apps/GiulioSorrentino.WinDateFrom)
 
-## Su android
+### Su android
 
 
 [![google](https://play.google.com/intl/it_it/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=org.numerone.altervista.windatefrom)
+
+### Su Debian
+
+https://www.youtube.com/watch?v=6Ov4hmE7two
 
 
 ## Donazioni
