@@ -5,7 +5,11 @@ Serve per rompere il ghiaccio durante una relazione interpersonale, ossia per ap
 ## ATTENZIONE
 
 Da quando sfrutta il pattern MVVM della microsoft il software è collegato alla IA di sistema.
-E' possibile farle leggere i dati.
+E' possibile farle leggere i dati, quindi può comprenderli e validarli, in base all'internet semantico della persona indicata.
+
+## Video dimostrativo
+
+https://www.youtube.com/watch?v=VUeYCrSomzk&t=506s
 
 ## La dimostrazione dell'algoritmo
 
