@@ -5,8 +5,11 @@ Serve per rompere il ghiaccio durante una relazione interpersonale, ossia per ap
 ## ATTENZIONE
 
 Da quando sfrutta il pattern MVVM della microsoft il software è collegato alla IA di sistema.
+
 E' possibile farle leggere i dati, quindi può comprenderli e validarli, in base all'internet semantico della persona indicata e se vi dice che non è il caso avit pijat o palo, meglio non fare gli stalker e cancellare i dati.
+
 Ricordatevi che l'uomo sceglie e la donna decide, se chiedete spiegazioni tanto vale cancellare il programma e tornare sulla playstation...
+
 Leggete attentamente la descrizione, se avete intenzione di insistere: "le donne amano essere pensate, ma solo dagli uomini con cui si immaginano col vestito da sposa".
 
 ## Video dimostrativo
