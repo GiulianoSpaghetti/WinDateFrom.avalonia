@@ -14,7 +14,7 @@ Leggete attentamente la descrizione, se avete intenzione di insistere: "le donne
 
 ## Video dimostrativo
 
-https://www.youtube.com/watch?v=zDlAn4efECY
+https://www.youtube.com/watch?v=VUeYCrSomzk&t=506s
 
 ## La dimostrazione dell'algoritmo
 
@@ -27,7 +27,7 @@ La prima volta che vedete una che vi piace vi salvate la data, poi quando ci sar
 
 Oh che bel nome ce lo prendiamo un caffé insieme?" e se scatta la scintilla ed avete un computer con NPU potete corteggiarla dicendole di tanto in tanto, non sempre se no è snervante, il numero di giorni passati dal primo incontro, non dalla prima... (quella viene dopo!) tramite IA. Se poi vi fidanzate potete augurarle il mesiversario o l'anniversario sempre tramite IA.
 
-Se la scintilla non scatta dovete cancellare la opzioni.
+Se la scintilla non scatta dovete cancellare la cartella %localappdata%\windatefrom oppure la cartella $HOME/.local/share/WinDateFrom.
 
 E' utilissima per cortecciare!
 
@@ -35,7 +35,7 @@ E' utilissima per cortecciare!
 
 ### Su Windows
 
-[![pling](http://numeronesoft.ddns.net:8080/images/pling.png)](https://www.pling.com/p/2330220/)
+[![winget](https://user-images.githubusercontent.com/49786146/159123313-3bdafdd3-5130-4b0d-9003-40618390943a.png)](https://winstall.app/apps/GiulioSorrentino.WinDateFrom)
 
 ### Su android
 
