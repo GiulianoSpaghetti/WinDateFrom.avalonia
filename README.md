@@ -4,6 +4,8 @@ Serve per rompere il ghiaccio durante una relazione interpersonale, ossia per ap
 
 ## ATTENZIONE
 
+Come farsi spiegare il readme da gemini: https://g.co/gemini/share/e41be771ff2a , basta loggarsi con l'account Google.
+
 Da quando sfrutta il pattern MVVM della microsoft il software è collegato alla IA di sistema.
 
 E' possibile farle leggere i dati, quindi può comprenderli e validarli, in base all'internet semantico della persona indicata e se vi dice che non è il caso avit pijat o palo, meglio non fare gli stalker e cancellare i dati.
