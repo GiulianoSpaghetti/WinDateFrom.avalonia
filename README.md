@@ -4,7 +4,7 @@ Serve per rompere il ghiaccio durante una relazione interpersonale, ossia per ap
 
 ## ATTENZIONE
 
-Come farsi spiegare il readme da gemini: https://g.co/gemini/share/e41be771ff2a , basta loggarsi con l'account Google.
+(Fatti spiegare il progetto da Gemini di Google)[https://gemini.google.com/share/566553afcdab]: basta loggarsi con il proprio account.
 
 Da quando sfrutta il pattern MVVM della microsoft il software è collegato alla IA di sistema.
 
