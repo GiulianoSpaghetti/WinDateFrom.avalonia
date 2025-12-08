@@ -44,10 +44,6 @@ E' utilissima per cortecciare!
 
 [![google](https://play.google.com/intl/it_it/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=org.numerone.altervista.windatefrom)
 
-### Su Debian
-
-Bisogna aspettare perché non compila perché il maui sta venendo aggiornato per trixie (avete letto bene maui, anche se è in uno)
-
 ## Donazioni
 
 http://numerone.altervista.org/donazioni.php
