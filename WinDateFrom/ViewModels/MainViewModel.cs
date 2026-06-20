@@ -12,9 +12,7 @@ namespace WinDateFrom.ViewModels;
 
 public class MainViewModel : ViewModelBase
 {
-
-    //nessun nome di persona ha meno di 3 caratteri
-    private static readonly int MinChars=3;
+    private static readonly int MinChars = 3;
     internal Opzioni? o;
     private readonly string PathName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"WinDateFrom");
     private readonly string FileName = "opzioni.json";
@@ -61,8 +59,8 @@ public class MainViewModel : ViewModelBase
     {
         o = new Opzioni();
         LeggiOpzioni();
-        _data = new DateTimeOffset(new DateTime(o.year, o.month, o.day));
-        _nome = o.Nome;
+        Data = new DateTimeOffset(new DateTime(o.year, o.month, o.day));
+        Nome = o.Nome;
     }
     public void CaricaOpzioni()
     {
@@ -81,7 +79,7 @@ public class MainViewModel : ViewModelBase
             Risultato = "Invalid rvalue";
             return;
         }
-        if (differenza.Days > 1 && Nome.Lenght=>MinChars)
+        if (differenza.Days > 1 && Nome.Length>=MinChars)
         {
             if (d.Day == _data.Day)
                 if (d.Month == _data.Month)
@@ -101,7 +99,7 @@ public class MainViewModel : ViewModelBase
             Risultato = $"You met {Nome} about {differenza.Days} days ago.";
         if (!SalvaOpzioni())
            Anniversario = "Impossibile salvare le opzioni";
-        AuguraVisible = ricorrenza != ""
+        AuguraVisible = ricorrenza != "";
         CalcolaEnable = false;
     }
 
@@ -164,6 +162,4 @@ public class MainViewModel : ViewModelBase
         return true;
     }
 
-
 }
-

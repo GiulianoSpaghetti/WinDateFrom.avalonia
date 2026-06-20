@@ -14,7 +14,6 @@ public partial class MainView : UserControl
 {
     public MainView()
     {
-        Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
         InitializeComponent();
     }
 
@@ -26,4 +25,3 @@ public partial class MainView : UserControl
         auguri.IsEnabled = false;
     }
 }
-
