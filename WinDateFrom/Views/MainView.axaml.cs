@@ -1,5 +1,4 @@
 ﻿using Avalonia.Controls;
-using DynamicData;
 using System;
 using Avalonia.Interactivity;
 using System.IO;
