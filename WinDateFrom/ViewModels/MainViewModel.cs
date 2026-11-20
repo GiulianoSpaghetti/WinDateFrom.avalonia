@@ -1,24 +1,24 @@
-﻿using Avalonia.Interactivity;
-using System.IO;
-using System;
-using Avalonia.Controls;
+﻿using Avalonia.Controls;
+using Avalonia.Interactivity;
 using ReactiveUI;
+using System;
+using System.IO;
 using System.Net;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Text.Json;
 
 namespace WinDateFrom.ViewModels;
 
 public class MainViewModel : ViewModelBase
 {
+    public DateTime Today { get; } = DateTime.Now;
     private static readonly int MinChars = 3;
     internal Opzioni? o;
-    private readonly string PathName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"WinDateFrom");
+    private readonly string PathName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "WinDateFrom");
     private readonly string FileName = "opzioni.json";
-    public DateTimeOffset _data;
+    public DateTime _data;
     public string ricorrenza = string.Empty;
     private string _nome = string.Empty;
-    private string _risultato=string.Empty;
+    private string _risultato = string.Empty;
     private string _anniversario = string.Empty;
     private bool _calcolaEnable = true;
     public bool CalcolaEnable
@@ -48,7 +48,7 @@ public class MainViewModel : ViewModelBase
         get => _nome;
         set => this.RaiseAndSetIfChanged(ref _nome, value);
     }
-    public DateTimeOffset Data
+    public DateTime Data
     {
         get => _data;
         set => this.RaiseAndSetIfChanged(ref _data, value);
@@ -58,7 +58,7 @@ public class MainViewModel : ViewModelBase
     {
         o = new Opzioni();
         LeggiOpzioni();
-        Data = new DateTimeOffset(new DateTime(o.year, o.month, o.day));
+        Data = new DateTime(o.year, o.month, o.day);
         Nome = o.Nome;
     }
     public void CaricaOpzioni()
@@ -78,7 +78,7 @@ public class MainViewModel : ViewModelBase
             Risultato = "Invalid rvalue";
             return;
         }
-        if (differenza.Days > 1 && Nome.Length>=MinChars)
+        if (differenza.Days > 1 && Nome.Length >= MinChars)
         {
             if (d.Day == _data.Day)
                 if (d.Month == _data.Month)
@@ -92,12 +92,12 @@ public class MainViewModel : ViewModelBase
                     ricorrenza = "mesiversary";
                 }
         }
-        if (Nome.Length<MinChars)
+        if (Nome.Length < MinChars)
             Risultato = $"{differenza.Days} days are passed";
         else
             Risultato = $"You met {Nome} about {differenza.Days} days ago.";
         if (!SalvaOpzioni())
-           Anniversario = "Impossibile salvare le opzioni";
+            Anniversario = "Impossibile salvare le opzioni";
         AuguraVisible = ricorrenza != "";
         CalcolaEnable = false;
     }
@@ -113,7 +113,7 @@ public class MainViewModel : ViewModelBase
         }
         catch (FileNotFoundException ex)
         {
-            DateTime d = DateTime.Now;
+            DateTime d = Today;
             o = new Opzioni();
             o.Nome = "";
             o.day = d.Day;
@@ -125,21 +125,24 @@ public class MainViewModel : ViewModelBase
         file.Close();
         try
         {
-            o =JsonSerializer.Deserialize<Opzioni>(s);
-        } catch (JsonException ex)
+            o = JsonSerializer.Deserialize<Opzioni>(s);
+        }
+        catch (JsonException ex)
         {
             o = null;
-        } catch (NotSupportedException ex1)
+        }
+        catch (NotSupportedException ex1)
         {
             o = null;
-        } catch (ArgumentNullException ex2)
+        }
+        catch (ArgumentNullException ex2)
         {
             o = null;
         }
 
         if (o == null)
         {
-            DateTime d = DateTime.Now;
+            DateTime d = Today;
             o = new Opzioni();
             o.Nome = "";
             o.day = d.Day;
